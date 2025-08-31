@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勉強時間カレンダー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="month-display"></h1>
+            <div>
+                <button id="prev-button">前月</button>
+                <button id="next-button">次月</button>
+            </div>
+        </header>
+
+        <div id="calendar">
+            <div class="day-of-week">日</div>
+            <div class="day-of-week">月</div>
+            <div class="day-of-week">火</div>
+            <div class="day-of-week">水</div>
+            <div class="day-of-week">木</div>
+            <div class="day-of-week">金</div>
+            <div class="day-of-week">土</div>
+        </div>
+
+        <div id="study-log-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="modal-date"></h2>
+                
+                <div id="study-entries">
+                    </div>
+
+                <button id="add-entry-button">教科を追加</button>
+                
+                <label for="comment-input">コメント:</label>
+                <textarea id="comment-input" rows="3"></textarea>
+                
+                <button id="save-button">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

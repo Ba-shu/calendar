@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+header button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day-of-week {
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+    padding: 5px 0;
+}
+
+.day-box {
+    background-color: #f7f9fc;
+    border: 1px solid #e0e0e0;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    /* 新しいスタイルを追加 */
+    overflow: hidden; /* 中身がはみ出しても見えないようにする */
+}
+
+.day-box:hover {
+    background-color: #e9ecef;
+}
+
+.day-number {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.study-log-list {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    font-size: 0.7em;
+    width: 100%;
+    /* 新しいスタイルを追加 */
+    overflow-y: auto; /* 縦方向のスクロールを可能にする */
+}
+
+.study-log-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: white;
+}
+
+.subject-math { background-color: #4CAF50; }
+.subject-english { background-color: #2196F3; }
+.subject-japanese { background-color: #9C27B0; }
+.subject-science { background-color: #FF9800; }
+.subject-social { background-color: #F44336; }
+.subject-other { background-color: #607D8B; }
+
+.padding-day {
+    background-color: #fff;
+    border: none;
+    cursor: default;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.study-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.study-entry select, .study-entry input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.study-entry button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-entry-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#comment-input {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 10px;
+}
+
+#save-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
